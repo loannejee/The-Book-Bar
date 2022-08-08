@@ -15,6 +15,16 @@
       "auth": {
         "thebookbarb768268e": {},
         "true": {}
+      },
+      "function": {
+        "createOrder": {
+          "deploymentBucketName": "amplify-thebookbar-prod-141122-deployment",
+          "s3Key": "amplify-builds/createOrder-3170556d30587a2f3544-build.zip"
+        },
+        "processPayment": {
+          "deploymentBucketName": "amplify-thebookbar-prod-141122-deployment",
+          "s3Key": "amplify-builds/processPayment-776e4c4b3346657a3665-build.zip"
+        }
       }
     }
   }

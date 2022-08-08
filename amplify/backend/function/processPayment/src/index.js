@@ -17,11 +17,13 @@
 // };
 
 //  =============================================================
+import env from "react-dotenv";
 
 const { CognitoIdentityServiceProvider } = require("aws-sdk");
 const cognitoIdentityServiceProvider = new CognitoIdentityServiceProvider();
-const USER_POOL_ID = "<userpool_id>";
-const stripe = require("stripe")("<strip_private_key>");
+const USER_POOL_ID = "us-east-1_UFm6jhlEB";
+// strip_private_key
+const stripe = require("stripe")(`${env.STRIPE_PRIVATE_KEY}`);
 
 const getUserEmail = async (event) => {
   const params = {
