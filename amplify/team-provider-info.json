@@ -1,0 +1,21 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-thebookbar-prod-141122-authRole",
+      "UnauthRoleArn": "arn:aws:iam::019512535689:role/amplify-thebookbar-prod-141122-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::019512535689:role/amplify-thebookbar-prod-141122-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-thebookbar-prod-141122-deployment",
+      "UnauthRoleName": "amplify-thebookbar-prod-141122-unauthRole",
+      "StackName": "amplify-thebookbar-prod-141122",
+      "StackId": "arn:aws:cloudformation:us-east-1:019512535689:stack/amplify-thebookbar-prod-141122/58bcfe10-167c-11ed-89da-0a1b4053af2d",
+      "AmplifyAppId": "deu2vc75kdnd6"
+    },
+    "categories": {
+      "auth": {
+        "thebookbarb768268e": {},
+        "true": {}
+      }
+    }
+  }
+}

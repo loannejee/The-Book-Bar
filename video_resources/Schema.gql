@@ -1,5 +1,7 @@
 type Book
+  # this directory will create the DynamoDB table and the VTL template for CRUD operations
   @model(subscriptions: null)
+  # this directory is handled by AWS Cognito User Pool Authentication
   @auth(
     rules: [
       # allow admins to create, update and delete books
@@ -56,6 +58,12 @@ type Order
   books: [BookOrder] @connection(keyName: "byOrder", fields: ["id"])
 }
 
+type Mutation {
+  processOrder(input: ProcessOrderInput!): OrderStatus
+    @function(name: "processPayment-${env}")
+    @function(name: "createOrder-${env}")
+}
+
 enum OrderStatus {
   SUCCESS
   FAILED
@@ -75,10 +83,4 @@ input ProcessOrderInput {
   total: Float!
   token: String!
   address: String
-}
-
-type Mutation {
-  processOrder(input: ProcessOrderInput!): OrderStatus
-    @function(name: "processPayment-${env}")
-    @function(name: "createOrder-${env}")
 }
